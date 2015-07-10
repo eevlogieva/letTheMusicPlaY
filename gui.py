@@ -10,6 +10,9 @@ from PyQt5.QtWidgets import (QToolButton, QStyle, QHBoxLayout, QPushButton,
                              QVBoxLayout, QWidget, QFileDialog, QMessageBox,
                              QListWidget, QInputDialog)
 
+""" PlayerControls is the class, responsible for the player buttons play,
+    pause, stop, prev, next, their functionallity and looks."""
+
 
 class PlayerControls(QWidget):
 
@@ -56,6 +59,10 @@ class PlayerControls(QWidget):
             self.play.emit()
         elif self.playerState == QMediaPlayer.PlayingState:
             self.pause.emit()
+
+"""The Player class is responsible for the looks of the player,
+   it has two logical parts, the layouts - the playlist layout
+   and the functionality layout"""
 
 
 class Player(QWidget):

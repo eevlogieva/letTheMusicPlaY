@@ -7,6 +7,12 @@ from mutagen.mp3 import MP3
 from PyQt5.QtCore import QFileInfo, QUrl
 from PyQt5.QtMultimedia import QMediaPlaylist, QMediaContent
 
+"""This is a class that wraps together a QMediaPlaylist object -
+   the object, needed so that music can be played through QtMultimedia,
+   and my representation of a Playlist - a list of Song objects
+   and a string for a name. Load and save work with the json format,
+   and the files that are saved/loaded are with an extension .ltmp"""
+
 
 class PlaylistWrapper:
     def __init__(self, name):
